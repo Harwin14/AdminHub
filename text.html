@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+          
+            h1 {
+                text-shadow: 0px 0px 5px red, 0px 0px 5px blue, 0px 0px 5px red;
+            }
+            /* kanan bawah ketebalan warna */
+            .shadow {
+                box-shadow: 5px 5px 5px #ccc;
+                width: 100px;
+                height: 100px;
+                position: relative;
+            }
+            h2 {
+                position: absolute;
+                top: 50px;
+                left: 17px;
+            }
+            .box {
+                margin-top:10px;
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(to bottom right, orange, yellow);
+            }
+        </style>
+        <section>
+            <h1>Contoh Multiple Color</h1>
+            <div class="shadow">
+                <img src="img/people.png" width="100px" />
+                <h2>people</h2>
+            </div>
+            <div class="box"></div>
+        </section>
+    </body>
+</html>

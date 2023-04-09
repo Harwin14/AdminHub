@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: #f3ac3c;
+            display: grid;
+            place-items: center;
+            height: 100%;
+        }
+        .outer {
+            display: flex;
+            align-items: center;
+        }
+        .outer div:nth-child(1){
+            width: 120px;
+            height: 120px;
+            background: #998235;
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+        }
+        .outer div:nth-child(1)::before{
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 10px;
+            background: #1a4341;
+            border-radius: 10px;
+            top:50%;
+            transform: translateY(-50%);
+            left: 33%;
+        }
+        .outer div:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #998235;
+            margin-left: -50px;
+            position: relative;
+            z-index: 20;
+        }
+        .outer div:nth-child(2)::before{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #1a4341 ;
+            border-radius: 50%;
+            border:5px solid #f3ac3c ;
+            top:50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+        }
+        .outer div:nth-child(3){
+            width: 140px;
+            height: 20px;
+            background: #1a4341 ;
+            margin-left: -10px;
+    
+        }
+        .outer div:nth-child(4){
+            width: 40px;
+            height: 30px;
+            background: #998235 ;
+            border-radius: 10px;
+            margin-left: -30px;
+            position: relative;
+        }
+        .outer div:nth-child(4)::before{
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 50%;
+            background: #1a4341;
+            border-radius: 4px;
+        }
+        .outer div:nth-child(4)::after{
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 50%;
+            background: #1a4341;
+            border-radius: 4px;
+        }
+        
+    </style>
+</body>
+</html>
