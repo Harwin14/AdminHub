@@ -7,4 +7,4 @@ const Users = db.define('users',{
     nam
 },{
     freezeTableName:true
-})   
+})    
